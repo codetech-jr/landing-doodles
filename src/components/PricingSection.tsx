@@ -5,7 +5,7 @@
 
 import React, { useRef } from 'react';
 // 2. Importamos las herramientas de Framer Motion.
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, Variants } from 'framer-motion';
 import { Check, PawPrint } from 'lucide-react';
 
 const packagesData = [
@@ -56,12 +56,15 @@ const containerVariants = {
   }
 };
 
-const cardVariants = {
+const cardVariants: Variants = { // <-- Añadimos el tipo aquí
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: "easeOut" }
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut"
+    }
   }
 };
 

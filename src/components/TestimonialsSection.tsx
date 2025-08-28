@@ -5,7 +5,7 @@
 
 import React, { useRef } from 'react';
 // 2. Importamos las herramientas de Framer Motion.
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, Variants } from 'framer-motion';
 import Image from 'next/image';
 import { Star } from 'lucide-react';
 
@@ -39,7 +39,7 @@ const containerVariants = {
     }
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
         opacity: 1,

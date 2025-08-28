@@ -5,7 +5,7 @@
 
 import React, { useRef } from 'react';
 // 2. Importamos las herramientas de Framer Motion.
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, Variants } from 'framer-motion';
 import { Bath, Scissors, PawPrint, Leaf } from 'lucide-react';
 
 const services = [
@@ -42,7 +42,7 @@ const gridContainerVariants = {
   }
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: { 
     opacity: 1, 
